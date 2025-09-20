@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 3</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <load
+      src="./partials/header.html"
+      icon-path="./img/sprite.svg#logo"
+      highlight-curr="active"
+    />
+
+    <main>
+      <div class="form-container">
+        <form class="feedback-form" autocomplete="off">
+          <label class="title">
+            Email
+            <input class="input" type="email" name="email" autofocus />
+          </label>
+          <label class="title">
+            Message
+            <textarea class="textarea" name="message" rows="8"></textarea>
+          </label>
+          <button class="sub-btn" type="submit">Submit</button>
+        </form>
+        <a class="back-link" href="./index.html">Go back</a>
+      </div>
+    </main>
+    <script type="module" src="./js/2-form.js"></script>
+  </body>
+</html>
