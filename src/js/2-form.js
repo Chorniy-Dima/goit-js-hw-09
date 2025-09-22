@@ -8,10 +8,18 @@ let input = form.elements.email;
 let textarea = form.elements.message;
 
 let stor = localStorage.getItem("feedback-form-state");
-stor = JSON.parse(stor);
 
-input.value = stor.email ?? "";
-textarea.value = stor.message ?? "";
+if (stor !== null) {
+    stor = JSON.parse(stor);
+    if (stor.email !== undefined) {
+        input.value = stor.email;
+        formData.email = stor.email;
+    };
+    if (stor.message !== undefined) {
+        textarea.value = stor.message;
+        formData.message = stor.message;
+    }
+}
 
 form.addEventListener("input", formInput);
 
